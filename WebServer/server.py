@@ -66,9 +66,9 @@ def login():
     # Khai bao model với flask_sqlalchemy
 class User(db.Model):
    id = db.Column(db.Integer, primary_key = True)
-   userId = db.Column('ID', db.String(20), unique=True)
-   userName = db.Column('Name', db.String(50))
-   userAge = db.Column('Age', db.String(10))
+   userId = db.Column('userId', db.String(20), unique=True)
+   userName = db.Column('userName', db.String(50))
+   userAge = db.Column('userAge', db.String(10))
   
    def __init__(self, userId, userName, userAge):
        self.userId = userId
