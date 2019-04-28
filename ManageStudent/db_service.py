@@ -1,7 +1,8 @@
-from flask_sqlalchemy import SQLALchemy
+
+from flask_sqlalchemy import SQLAlchemy
 from config import app
 
-db = SQLALchemy(app)
+db = SQLAlchemy(app)
 
 class Student(db.Model):
     id = db.Column(db.Integer, primary_key = True)
