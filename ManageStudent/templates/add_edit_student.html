@@ -1,0 +1,43 @@
+<h3>Student information</h3>
+
+<div id = 'error_list'>
+	{% if errorList %}
+	<ul>
+		{% for error in errorList %}
+		<li style='color:red'>{{error}}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+</div>
+
+<form method="post" enctype='multipath/form-data'>
+	<input type='hidden' name='studentId' value='{{ form.studentId }}'>
+	<table>
+		<tr>
+			<td>Student Number</td>
+			<td>
+				<input name='studentNo' value='{{ form.studentNo }}'>
+			</td>
+		</tr>
+		<tr>
+			<td>Student Name</td>
+			<td>
+				<input name='studentName' value="{{ form.studentName}}">
+			</td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td>
+				<input name='address' value="{{ form.address}}">
+			</td>
+		</tr>
+		<tr>
+			<td>Profile picture</td>
+			<td>
+				<input type="file" name="profilePicture">
+			</td>
+		</tr>
+	</table>
+	<input type="submit" name="Save">
+	<input type="button" name="Back" onclick='localtion.href"/"'>
+</form>

@@ -5,15 +5,31 @@
      <th>Student Number</th>
      <th>Student Name</th>
      <th>Address</th>
+     <th>Profile Picture</th>
+     <th></th>
    </tr>
  {% for student in studentList %}  
    <tr>
      <td> {{ student.studentNo }} </td>
      <td> {{ student.studentName }} </td>
      <td> {{ student.address }} </td>
+     <td> <image width='256' src='/static/images/{{studentId}}.jpg?t={{time}}'></image></td>
+     <td>
+      <a href='{{url_for("add_edit_student", studentId=student.id) }}'>Edit</a>
+      <a href='javascript:confirmDelete("{{url_for("delete_student", studentId=student.id)}}")'>Delete</a>
+     </td>
    </tr>    
  {% endfor %}
- </table>  
+ </table> 
+ <script>
+  function confirmDelete(url){
+    if(confirm('Do you want to delete?')){
+      location.href = url
+    }
+  }
+</script>
 {% else %}
  <p>No student available.</p>
 {% endif %}
+
+<br><input type="button" value="Add Student" onclick='location.href="{{url_for("add_edit_student", studentId=0)}}"'>
