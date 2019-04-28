@@ -1,0 +1,19 @@
+
+{% if studentList %}
+ <table border=1>
+   <tr>
+     <th>Student Number</th>
+     <th>Student Name</th>
+     <th>Address</th>
+   </tr>
+ {% for student in studentList %}  
+   <tr>
+     <td> {{ student.studentNo }} </td>
+     <td> {{ student.studentName }} </td>
+     <td> {{ student.address }} </td>
+   </tr>    
+ {% endfor %}
+ </table>  
+{% else %}
+ <p>No student available.</p>
+{% endif %}
