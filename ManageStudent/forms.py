@@ -16,7 +16,7 @@ class StudentForm():
 			else:
 				self.profilePictureFile = None
 		elif dbModel:
-			self.studentId = dbModel.Id
+			self.studentId = dbModel.id
 			self.studentNo = dbModel.studentNo
 			self.studentName = dbModel.studentName
 			self.address = dbModel.address
