@@ -15,28 +15,28 @@ def hello_world():
    if request.method == 'POST':
        if 'name' in request.form:
            name = request.form['name']
-           return f'Hello {name} from POST method (form-data)'
+           return ("Hello {name} from POST method (form-data)")
                         
        elif 'name' in request.json:
            name = request.json['name']
-           return f'Hello {name} from POST method (JSON)'        
+           return ("Hello {name} from POST method (JSON)")
                         
        else:
-           return 'Hello from POST method'
+           return ("Hello from POST method")
    else:
        name = request.args.get('name', '')
-       print(f'Hello {name} from GET method')
-       return f'Hello {name} from GET method'
+       print("Hello {name} from GET method")
+       return ("Hello {name} from GET method")
 
 
 # Mapping tham so tring url
 @app.route('/hello/<name>')
 def hello_name(name):
-  return f'Hello {name}'
+  return ("Hello {name}")
 
 @app.route('/student/<int:studentId>')
 def getStudent(studentId):
-  return f'Student Id = {studentId}'
+  return ("Student Id = {studentId}")
 
 # su dung template
 @app.route('/Usetemplate')

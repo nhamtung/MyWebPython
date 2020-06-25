@@ -45,4 +45,4 @@ def list_student():
     return render_template("list_student.html", studentList=studentList)
  
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(host='10.20.97.213', port=8080, debug = True)

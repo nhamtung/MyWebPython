@@ -1,0 +1,47 @@
+https://dttvn0010.github.io/python_tutorial/flask/
+
+###################################################
+- Install Flask: $pip install flask flask_sqlalchemy
+
+###################################################
+			Run web server:
+
+- Source: $cd ~/MyWebPython/example/
+- Run web server: $python3 webServer.py
+- Open browser: http://localhost:5000
+				http://127.0.0.1:5000
+
+####################################################
+		Khai bao URL va method cho Endpoint
+
+- Source: $cd ~/MyWebPython/example/
+- Run web server: $python3 DefineUrlAndMethodForEndpoint.py
+- Open browser: http://localhost:5000/hello
+Note: Theo mặc định, phương thức của endpoint sẽ là GET
+
+####################################################
+			Lay tham so tu request
+
+- Source: $cd ~/MyWebPython/example/
+- Run web server: $python3 GetDataFromRequest.py
+- Open browser: http://localhost:5000
+
+####################################################
+			Mapping tham so trong URL
+
+- Source: $cd ~/MyWebPython/example/
+- Run web server: $python3 MappingParameterInURL.py
+- Open browser: http://localhost:5000/hello/TungNV
+				http://localhost:5000/student/1
+
+####################################################
+				Login on web:
+
+- Source: $cd ~/MyWebPython/example/Login/
+- Run web server: $python3 serverLogin.py
+- Open Browser: http://10.20.97.213:8080/login
+- Enter the user: admin
+- Enter the pass: password
+
+####################################################
+		
