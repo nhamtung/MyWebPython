@@ -35,6 +35,12 @@ Note: Theo mặc định, phương thức của endpoint sẽ là GET
 				http://localhost:5000/student/1
 
 ####################################################
+			Variable with Teamplate
+- Source: $cd ~/MyWebPython/example/template/
+- Run web server: $python3 variableTemplate.py
+- Open browser: http://localhost:5000/hello/TungNV
+
+####################################################
 				Login on web:
 
 - Source: $cd ~/MyWebPython/example/Login/
