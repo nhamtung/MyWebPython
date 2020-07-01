@@ -50,4 +50,41 @@ Note: Theo mặc định, phương thức của endpoint sẽ là GET
 - Enter the pass: password
 
 ####################################################
-		
+		Database with flask_sqlalchemy
+
+- Install MySQL client for python
+
+- static : thư mục chứa các file tĩnh, thư mục con images chứa các ảnh profile của các học sinh
+- templates : thư mục chứa các template html
+- config.py : File chứa các thông tin cấu hình
+- app.py : File ứng dụng chính của flask
+- forms.py : File định nghĩa các form để nhận tham số từ request
+- db_service.py : File chứa các chức năng truy xuất dữ liệu
+
+- Source: $cd ~/MyWebPython/example/databaseWithflaskSqlalchemy/
+- Run web server: $python3 app.py
+- Open Browser: http://10.20.97.213:8080
+
+#####################################################
+			Authentication với flask-jwt
+
+- pip install Flask-JWT
+- install Postman software
+
+- Source: $cd ~/MyWebPython/example/AuthenticationWithFlask_jwt/
+- Run web server: $python3 authentication.py
+- Open Browser: http://127.0.0.1:5000
+
+- Open Postman software
+- seclect "Create a request"
+- Enter request URL: http://127.0.0.1:5000/auth
+- Select: POST, body, raw, JSON
+- Content: {"username" : "admin","password" : "abc@123"}
+- Send
+
+- Copy token in Body - pretty - JSON
+- Enter request URL: http://127.0.0.1:5000/list_student
+- Select: GET, headers
+- If it is not have KEY "Authorization", add with Presets
+- Content in VALUE: JWT <token>
+- Send
